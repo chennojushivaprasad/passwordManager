@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  --medium-no-items: 2;
+  --large-no-items: 3;
+  --extralarge-no-items: 4;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (max-width: 992px) {
+  html {
+    font-size: 56%;
+  }
+
+  .search-input-container {
+    max-width: 250px;
+  }
+  .user-item {
+    width: calc(100% / var(--medium-no-items) - 1%);
+  }
+
+  .password-card-container {
+    gap: calc((var(--medium-no-items) * 1%) / (var(--medium-no-items) - 1));
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  html {
+    font-size: 43%;
+  }
+}
